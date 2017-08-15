@@ -89,7 +89,7 @@ var length = 10,
 // 发送ajax请求
 function getNews(callback) {
     $.ajax({
-            url: "http://platform.sina.com.cn/slide/album_tech",
+            url: "https://platform.sina.com.cn/slide/album_tech",
             jsonp: "jsoncallback",
             dataType: "jsonp",
             data: {

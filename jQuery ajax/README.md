@@ -1,0 +1,1 @@
+后端采用server-mock模拟，用jQuery ajax实现点击加载更多的效果

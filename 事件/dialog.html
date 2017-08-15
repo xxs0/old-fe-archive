@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>模态框</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #clickbtn {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 3px;
+            color: white;
+        }
+
+        #clickbtn:hover {
+            cursor: pointer;
+        }
+
+        .mod-dialog {
+            display: none;
+        }
+
+        .mod-dialog .cover {
+            background-color: #ccc;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+        }
+
+        .mod-dialog .mod-ct {
+            padding: 2px 2px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            width: 350px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+        }
+        /* header */
+
+        .mod-dialog .header {
+            position: relative;
+            height: 36px;
+            line-height: 36px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .mod-dialog .header h3 {
+            padding-left: 10px;
+        }
+
+        .mod-dialog .header span {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            line-height: 1;
+        }
+
+        .mod-dialog .header span:hover {
+            cursor: pointer;
+        }
+        /* content */
+
+        .mod-dialog .content {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .mod-dialog .content p {
+            font-size: 18px;
+            line-height: 36px;
+        }
+        /* footer */
+
+        .mod-dialog .footer {
+            padding: 10px;
+        }
+
+        .mod-dialog .footer a {
+            float: right;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id='clickbtn'>点击1</button>
+    <div id="mod" class="mod-dialog">
+        <div class="cover"></div>
+        <div class="mod-ct">
+            <div class="header">
+                <h3>我是标题</h3>
+                <span class='btn-cancel'>x</span>
+            </div>
+            <div class="content">
+                <p>我是内容</p>
+                <p>我是内容</p>
+            </div>
+            <div class="footer clearfix">
+                <a href="#" class="btn-confirm">确定</a>
+                <a href="#" class="btn-cancel">取消</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var clickbtn = document.getElementById('clickbtn'),
+            mod = document.getElementById('mod'),
+            modCt = document.querySelector('.mod-ct');
+
+        clickbtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            mod.style.display = 'block';
+        })
+
+        modCt.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (e.target && hasClass(e.target, 'btn-cancel')) {
+                mod.style.display = 'none';
+            }
+        })
+
+        document.body.addEventListener('click', function () {
+            mod.style.display = 'none';
+        })
+
+        function hasClass(ele, cls) {
+            return !!ele.className.match(new RegExp('\\b' + cls + '\\b'));
+        }
+    </script>
+</body>
+
+</html>

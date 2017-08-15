@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .tab {
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        .tab-header>li {
+            float: left;
+            width: 100px;
+            padding: 2px 1px;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .tab-header>li:last-child {
+            border-right: 0;
+        }
+
+        .tab-header>li.on {
+            background: #ccc;
+        }
+
+        .tab-content {
+            border-top: 1px solid #ccc;
+            padding: 10px 5px;
+        }
+
+        .tab-content>li {
+            display: none;
+            height: 100px;
+        }
+
+        .tab-content>li.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="tab-header clearfix">
+            <li class='on'>table1</li>
+            <li>table2</li>
+            <li>table3</li>
+        </ul>
+        <ul class="tab-content">
+            <li class='active'>内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+        </ul>
+    </div>
+    <script>
+        var tabHeader = document.querySelector('.tab-header'),
+            tabContent = document.querySelector('.tab-content'),
+            tabLis = document.querySelectorAll('.tab-header>li'),
+            tabContentLis = document.querySelectorAll('.tab-content>li');
+
+        tabHeader.addEventListener('click', function (e) {
+            var clickNode = e.target;
+            if (clickNode && clickNode.nodeName === 'LI') {
+                for (var i = 0; i < tabLis.length; i++) {
+                    tabLis[i].classList.remove('on');
+                }
+                clickNode.classList.add('on');
+                var index = [].indexOf.call(tabLis, clickNode);
+                for (var i = 0; i < tabContentLis.length; i++) {
+                    tabContentLis[i].classList.remove('active');
+                }
+                tabContentLis[index].classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

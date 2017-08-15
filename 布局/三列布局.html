@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>三列</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 清除浮动，防止浮动元素高度高于父容器高度时，footer元素被遮盖*/
+
+        .container:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        menu {
+            float: left;
+            width: 20%;
+            height: 270px;
+            background-color: green;
+        }
+
+        aside {
+            float: right;
+            width: 30%;
+            height: 100px;
+            background-color: blue;
+        }
+
+        main {
+            height: 250px;
+            background-color: red;
+            margin-left: 20%;
+            margin-right: 30%;
+        }
+
+        footer {
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <menu>菜单</menu>
+        <aside>侧边</aside>
+        <main>主体</main>
+    </div>
+    <footer>尾部</footer>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>双飞翼</title>
+    <style>
+        .container:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .aside,.main,.menu {
+            float: left;
+        }
+
+        .menu {
+            width: 100px;
+            height: 300px;
+            background: red;
+            margin-left: -100%;
+        }
+
+        .aside {
+            width: 150px;
+            height: 250px;
+            background: orange;
+            margin-left: -150px;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .content {
+            margin-left: 100px;
+            margin-right: 150px;
+            background: green;
+            height: 280px;
+        }
+
+        footer {
+            height: 50px;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="content">main</div>
+        </div>
+        <div class="menu">menu</div>
+        <div class="aside">aside</div>
+    </div>
+    <footer>尾部</footer>
+</body>
+
+</html>

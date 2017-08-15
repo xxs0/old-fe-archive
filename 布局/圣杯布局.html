@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>圣杯布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 清除浮动，防止浮动元素高度高于父容器高度时，footer元素被遮盖*/
+        .container:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            padding-left: 200px;
+            padding-right: 150px;
+        }
+
+        menu, aside, main {
+            float: left;
+        }
+
+        menu {
+            width: 200px;
+            height: 300px;
+            background-color: green;
+            margin-left: -100%;
+            position: relative;
+            left: -200px;
+        }
+
+        aside {
+            width: 150px;
+            height: 150px;
+            background: orange;
+            margin-left: -150px;
+            position: relative;
+            right: -150px;
+        }
+
+        main {
+            width: 100%;
+            height: 250px;
+            background: red;
+        }
+
+        footer {
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main>主体</main>
+        <menu>菜单</menu>
+        <aside>侧边</aside>
+    </div>
+    <footer>尾部</footer>
+</body>
+
+</html>

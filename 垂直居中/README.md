@@ -1,0 +1,1 @@
+实现四种垂直居中效果，分别用到line-height、dispaly：table、绝对定位和flex布局。

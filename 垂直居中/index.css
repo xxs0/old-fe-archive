@@ -1,0 +1,65 @@
+/* 单行元素 */
+
+main {
+    width: 500px;
+    height: 100px;
+    border: 1px solid orange;
+    text-align: center;
+}
+
+main a {
+    line-height: 100px;
+    background-color: #000;
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+
+/* 多行元素 */
+
+.center-table {
+    display: table;
+    width: 150px;
+    height: 200px;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.center-table a {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #000;
+    color: white;
+}
+
+
+/* 绝对定位 */
+
+.container3 {
+    height: 200px;
+    position: relative;
+    border: 1px solid red;
+}
+
+.container3 p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* flex布局 */
+
+.container4 {
+    height: 200px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.container4 p {
+    margin: 0;
+}

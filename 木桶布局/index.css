@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img-preview {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.img-row {
+    margin-bottom: 10px;
+}
+
+.img-row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.img-box {
+    float: left;
+}

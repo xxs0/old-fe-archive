@@ -1,7 +1,10 @@
 This is my personal practices about front-end learning.
+### 轮播
+* [无限滚动轮播](https://xxs0.github.io/fe-practices/Carousel/无限滚动轮播.html)
+* [渐变轮播](https://xxs0.github.io/fe-practices/Carousel/渐变轮播.html)
 
 ### 懒加载
-预览：[懒加载图片](https://xxs0.github.io/fe-practices/Lazyload/layload.html)
+* [懒加载图片](https://xxs0.github.io/fe-practices/Lazyload/layload.html)
 
 ### 木桶布局
 * [木桶布局](https://xxs0.github.io/fe-practices/木桶布局/index.html)

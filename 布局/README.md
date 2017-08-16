@@ -1,4 +1,4 @@
-CSS基本的布局现实
+CSS基本的布局实现
 * 单列布局
 * 三列布局
   menu和aside区域分别左右浮动，数据顺序上不是通常的menu-main-aside,而是把main放在最后；menu、aside分别设置宽度，main数值不需要设置宽度，margin-left/right值让其居中

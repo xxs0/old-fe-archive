@@ -10,7 +10,8 @@ loadMore.addEventListener('click', function () {
         return
     }
     ajax('/loadMore', {
-        idx: curIdx;len: len
+        idx: curIdx,
+        len: len
     }, function (data) {
         appendData(data);
         isLoading = false;

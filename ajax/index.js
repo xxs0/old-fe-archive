@@ -3,7 +3,7 @@ var curIdx = 0,
     isLoading = false;
 
 let cl = document.querySelector("#contentList"),
-    loadMore = documentquerySelector("#loadMore");
+    loadMore = document.querySelector("#loadMore");
 
 loadMore.addEventListener('click', function () {
     if (isLoading) {
